@@ -1,0 +1,127 @@
+
+:root{
+  --colorTextos:#413e45
+}
+
+ body{
+
+   background: #aa4b6b;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "lato", sans-serif;
+    height: 780px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+  text-align: center;
+  font-weight: 700;
+}
+
+form{
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+
+}
+
+.form{
+  width: 100%;
+  margin: auto;
+}
+
+form .grupo{
+  position: relative;
+  margin: 45px;
+
+}
+
+input{
+  background:none;
+  color: #000;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus{
+  outline: none;
+  color:#5e5d5d;
+}
+
+label{
+  color: #b0b5bd;
+  font-size: 16px;
+  position:absolute;
+  left: 5px;
+  top: -50px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+  top: 14px;
+  font-size: 12px;
+  color: #2196f3;
+
+}
+
+.barra{
+  position:relative;
+  display: block;
+  width: 100%
+}
+
+.barra::before{
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to left, #F29492, #114357);
+  transition: 0.3s ease width;
+  left: 0;
+
+}
+
+input:focus~barra::before{
+
+  width: 100%
+}
+
+button{
+  background-color: purple;
+  font-family: "lato", sans-serif;
+  border: none;
+  display: block;
+  width: 120px;
+  margin: 10px auto;
+  color: #fff;
+  height: 45px;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.forget{
+  margin: 17px;
+  color: #000;
+  text-align: left
+}
+
+.forget a{
+  color:#000;
+  font-weight: 5000;
+
+
+}

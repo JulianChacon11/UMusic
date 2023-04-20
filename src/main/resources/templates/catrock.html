@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th= "https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock|PlayList</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script&family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rockcatego.css">
+
+</head>
+<body>
+
+    <div class="app">
+        <aside class="menu-aside">
+            <div class="logo">
+                <span class="i-logo i-logo2"></i>ROCKOLA</span>
+
+            </div>
+            <ul class="playlists" id="menuMusic">
+                <li class="playlist"><a href="#" class="play playBuscar"><i class="fa fa-search-plus  " aria-hidden="true"></i> BUSCAR</a></li>
+                <li class="playlist"><a href="#" class="play playEstudiar" id="cargarEstudiar">CANCIONES</a></li>
+                <li class="playlist" ><a href="#" class="play playArtista">ARTISTAS</a></li>
+                <li class="playlist"><a href="#" class="play playGéneros">GÉNERO</a></li>
+                <li class="playlist"><a href="#" class="play playPlayList">PLAYLIST</a></li>
+                <li class="playlist"><a href="#" class="play playRegistrarse"><i class="fa fa-registered" aria-hidden="true"></i> REGISTRARSE</a></li>
+            </ul>
+        </aside>
+
+   <div class="album" id="album">
+            <div class="user">
+
+                <span class="user-desc"><i class="fa fa-user-circle" aria-hidden="true"></i> Iniciar Sesión</a></span>
+            </div>
+            <div class="animate">
+            </div>
+            <div class="album-description">
+                    <div class="album-img">
+                        <img src="rock2.png" width="330" height="330">
+                    </div>
+                    <div class="album-text">
+                        <div class="title">
+                            <span>Rock Inglés y Español</span>
+                            <h2 id="titlePlaylist">Escucha tú rock favorito</h2>
+                        </div>
+                        <div class="description">
+                            <h3 id="playDescription">¡Que esperas para reproducir la lista!</h3>
+                        </div>
+                        <div class="acciones">
+                          <a href="#" class="btn reaccion-inactiva" id="reaccion"><i class="fas fa-heart"></i></a>
+                        </div>
+                        </div>
+                </div>
+       <div class="album-list-music">
+                <ul class="list-music" id="lista-music">
+
+                <li th:each="cancion: ${canciones}" class="music">
+                        <a th:href="${cancion.link}" class="btn play-music"><i class="far fa-play-circle"></i></a>
+                        <h3 th:text="${cancion.nombre}">...</h3>
+                        <h3 th:text="${cancion.duracion}">...</h3>
+                 
+                    </li>   
+           
+                </ul>
+       </div>
+   </div>
+    </div>
+
+        <div class="reproducir">
+            <div class="controles" id="controles">
+                <a href="#" class="btn control atras"><i class="fas fa-backward"></i></a>
+                <a href="#" class="btn control play-musica"><i class="far fa-play-circle"></i></a>
+                <a href="#" class="btn control siguiente"><i class="fas fa-forward"></i></a>
+                <a href="#" class="btn control pausa"><i class="far fa-pause-circle"></i></a>
+                <div class="volumen">
+                    <a href="#" class="subir"></a>
+                    <a href="#" class="bajar"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="rock.js"></script>
+</body>
+</html>
